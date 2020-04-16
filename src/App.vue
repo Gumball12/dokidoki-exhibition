@@ -4,7 +4,7 @@
       <header-component />
 
       <main>
-        <router-view/>
+        <router-view :env="env" />
       </main>
 
       <footer-component />
@@ -13,14 +13,23 @@
 </template>
 
 <script>
+import yaml from 'yaml';
+
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 
 export default {
   name: 'App',
+  data: () => ({
+    env: [],
+  }),
   components: {
     HeaderComponent,
     FooterComponent,
+  },
+  async mounted() {
+    const yamlText = await (await fetch('./data.yml')).text();
+    this.env = yaml.parse(yamlText);
   },
 };
 </script>
