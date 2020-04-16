@@ -1,7 +1,8 @@
 <template>
-  <header class="pb-8">
+  <header>
     <h1>
-      <a target="_blank" href="https://www.instagram.com/studio__dokidoki/">@studio_dokidoki</a>
+      <router-link to="/">@studio_dokidoki</router-link>
+      <a class="float-right" target="_blank" href="https://www.instagram.com/studio__dokidoki/">ig</a>
     </h1>
   </header>
 </template>
