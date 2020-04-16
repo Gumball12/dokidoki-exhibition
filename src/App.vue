@@ -1,21 +1,73 @@
 <template>
-  <v-container>
-    <header>
-      @studio_dokidoki
-    </header>
+  <v-app>
+    <v-container class="contents-wrapper py-8 px-4">
+      <header-component />
 
-    <main>
-      <router-view/>
-    </main>
+      <main>
+        <router-view/>
+      </main>
 
-    <footer>
-      created by @shjdga
-    </footer>
-  </v-container>
+      <footer-component />
+    </v-container>
+  </v-app>
 </template>
 
 <script>
+import HeaderComponent from '@/components/HeaderComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
+
 export default {
   name: 'App',
+  components: {
+    HeaderComponent,
+    FooterComponent,
+  },
 };
 </script>
+
+<style lang="scss">
+
+/* global */
+
+// variables
+:root {
+  --contents-width: 660px;
+
+  --font-color: #fafafa;
+  --background-color: #212121;
+}
+
+// font: Jeju Myeongjo
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+// font
+a, * {
+  font-family: 'Jeju Myeongjo', serif !important;
+  font-weight: 300 !important;
+  color: var(--font-color) !important;
+}
+
+/* classes */
+
+.underline {
+  text-decoration: underline;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+.fill-width {
+  width: 100%;
+}
+</style>
+
+<style lang="scss" scoped>
+#app {
+  background: var(--background-color);
+
+  .contents-wrapper {
+    max-width: var(--contents-width);
+  }
+}
+</style>
