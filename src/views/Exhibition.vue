@@ -1,9 +1,11 @@
 <template>
   <section>
-    <poster-component :title="title" :author="pic[0][1]" :clickable="false" />
+    <template v-if="pic !== undefined">
+      <poster-component :title="title" :author="pic[0][1]" :clickable="false" />
 
-    <pictures-component v-for="(p, ind) in pic.slice(1)" :key="ind"
-      :title="title" :pic="p" />
+      <pictures-component v-for="(p, ind) in pic.slice(1)" :key="ind"
+        :title="title" :pic="p" />
+    </template>
 
     <div class="py-10" />
   </section>
@@ -26,6 +28,13 @@ export default {
     },
     pic() {
       return (this.env.pic || []).find(([v]) => v[0] === this.title);
+    },
+  },
+  watch: {
+    pic(v) {
+      if (v === undefined) {
+        this.$router.push('/404');
+      }
     },
   },
 };
