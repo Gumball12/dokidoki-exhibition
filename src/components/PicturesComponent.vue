@@ -6,7 +6,7 @@
     <picture-component
       class="mt-8"
       v-for="i in numero" :key="i"
-      :src="`./image/${title}/${owner}/${i}.jpg`" />
+      :src="`${baseurl}/image/${title}/${owner}/${i}.jpg`" />
   </article>
 </template>
 
@@ -18,6 +18,10 @@ export default {
     PictureComponent,
   },
   props: {
+    baseurl: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: true,

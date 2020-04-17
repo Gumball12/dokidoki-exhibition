@@ -4,11 +4,11 @@
 
     <v-lazy v-model="isActive" :options="{ thresold: 0.5 }" transition="fade-transition">
       <img v-if="clickable"
-        class="pointer-cursor fill-width mt-6" :src="`./image/${title}/poster.jpg`"
+        class="pointer-cursor fill-width mt-6" :src="`${baseurl}/image/${title}/poster.jpg`"
         :data-title="title" @click="exhibit">
 
       <img v-else
-        class="fill-width mt-6" :src="`./image/${title}/poster.jpg`">
+        class="fill-width mt-6" :src="`${baseurl}/image/${title}/poster.jpg`">
     </v-lazy>
 
     <figcaption class="text-right">
@@ -24,6 +24,10 @@ export default {
     isActive: false,
   }),
   props: {
+    baseurl: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: true,

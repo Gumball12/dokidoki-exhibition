@@ -1,10 +1,10 @@
 <template>
   <section>
     <template v-if="pic !== undefined">
-      <poster-component :title="title" :author="pic[0][1]" :clickable="false" />
+      <poster-component :title="title" :author="pic[0][1]" :clickable="false" :baseurl="baseurl" />
 
       <pictures-component v-for="(p, ind) in pic.slice(1)" :key="ind"
-        :title="title" :pic="p" />
+        :title="title" :pic="p" :baseurl="baseurl" />
     </template>
 
     <div class="py-10" />
@@ -28,6 +28,9 @@ export default {
     },
     pic() {
       return (this.env.pic || []).find(([v]) => v[0] === this.title);
+    },
+    baseurl() {
+      return this.env.baseurl;
     },
   },
   watch: {
