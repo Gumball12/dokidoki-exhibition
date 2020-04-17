@@ -1,0 +1,10 @@
+# 사진 타입은 jpg
+
+pic:
+  -
+    - ['2020_04', 'non_frying']
+  -
+    - ['2020_03', 'dureungri'] # [date, poster_author]
+    - ['dureungri', 4] # [picture_owner, numero_picture]
+    - ['non_frying', 1]
+    - ['shjdga', 1]
