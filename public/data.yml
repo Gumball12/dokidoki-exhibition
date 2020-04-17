@@ -1,5 +1,7 @@
-# 사진 타입은 jpg
+# 이미지 저장소 basurl
+baseurl: "https://studio-dokidoki.s3.ap-northeast-2.amazonaws.com"
 
+# 사진 타입은 jpg로 통일
 pic:
   -
     - ['2020_04', 'non_frying']
