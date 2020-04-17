@@ -2,11 +2,11 @@
   <v-responsive :aspect-ratio="4/3">
     <v-lazy
       v-model="isActive" :options="{ threshold: 0.5 }" transition="fade-transition"
-      class="fill-height pointer-cursor d-flex flex-column justify-center"
+      class="fill-height pointer-cursor d-flex justify-center"
       :class="{ 'black': isActive }"
       @click="viewImage">
-      <figure class="d-flex">
-        <img class="fill-width" :src="src">
+      <figure class="align-self-center">
+        <img class="d-block fill-width" :src="src">
       </figure>
     </v-lazy>
   </v-responsive>
