@@ -25,7 +25,7 @@ export default {
       return this.$route.params.title;
     },
     pic() {
-      return this.env.pic.find(([v]) => v[0] === this.title);
+      return (this.env.pic || []).find(([v]) => v[0] === this.title);
     },
   },
 };
