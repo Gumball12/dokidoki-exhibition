@@ -4,7 +4,7 @@
       <a target="_blank" :href="`https://www.instagram.com/${owner}/`">@{{ owner }}</a></h2>
 
     <picture-component
-      class="pt-8"
+      class="mt-8"
       v-for="i in numero" :key="i"
       :src="`./image/${title}/${owner}/${i}.jpg`" />
   </article>
