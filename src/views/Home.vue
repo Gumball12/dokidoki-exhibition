@@ -1,7 +1,7 @@
 <template>
   <section>
     <poster-component v-for="(p, ind) in env.pic" :key="ind"
-      :title="p[0][0]" :author="p[0][1]" />
+      :title="p[0][0]" :author="p[0][1]" :clickable="p.length > 1" />
   </section>
 </template>
 
