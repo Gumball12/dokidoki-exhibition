@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/image/2020_04/poster.jpg"
   },
   {
-    "revision": "2846907cffb1a3f8d6defe6273761ab6",
+    "revision": "d478e8a5aad72a0be08fea4a25492cb9",
     "url": "/index.html"
   },
   {
