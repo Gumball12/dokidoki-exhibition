@@ -1,16 +1,22 @@
 <template>
   <v-responsive :aspect-ratio="4/3">
-    <div class="fill-height pointer-cursor d-flex flex-column justify-center black"
+    <v-lazy
+      v-model="isActive" :options="{ threshold: 0.5 }" transition="fade-transition"
+      class="fill-height pointer-cursor d-flex flex-column justify-center"
+      :class="{ 'black': isActive }"
       @click="viewImage">
       <figure class="d-flex">
         <img class="fill-width" :src="src">
       </figure>
-    </div>
+    </v-lazy>
   </v-responsive>
 </template>
 
 <script>
 export default {
+  data: () => ({
+    isActive: false,
+  }),
   props: {
     src: {
       type: String,

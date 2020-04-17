@@ -2,12 +2,14 @@
   <figure class="py-8 pb-12">
     <figcaption><h4 v-text="title" /></figcaption>
 
-    <img v-if="clickable"
-      class="pointer-cursor fill-width mt-6" :src="`./image/${title}/poster.jpg`"
-      :data-title="title" @click="exhibit">
+    <v-lazy v-model="isActive" :options="{ thresold: 0.5 }" transition="fade-transition">
+      <img v-if="clickable"
+        class="pointer-cursor fill-width mt-6" :src="`./image/${title}/poster.jpg`"
+        :data-title="title" @click="exhibit">
 
-    <img v-else
-      class="fill-width mt-6" :src="`./image/${title}/poster.jpg`">
+      <img v-else
+        class="fill-width mt-6" :src="`./image/${title}/poster.jpg`">
+    </v-lazy>
 
     <figcaption class="text-right">
       <h4>poster by
@@ -18,6 +20,9 @@
 
 <script>
 export default {
+  data: () => ({
+    isActive: false,
+  }),
   props: {
     title: {
       type: String,
