@@ -7,6 +7,8 @@
       class="mt-8"
       v-for="i in numero" :key="i"
       :src="`${baseurl}/image/${title}/${owner}/${i}.jpg`" />
+
+    <p class="mt-8 mb-0" v-html="comment" />
   </article>
 </template>
 
@@ -37,6 +39,9 @@ export default {
     },
     numero() {
       return this.pic[1];
+    },
+    comment() {
+      return `: ${this.pic[2].split('\n').join('<br>')}`;
     },
   },
 };
