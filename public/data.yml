@@ -4,9 +4,64 @@ baseurl: "https://studio-dokidoki.s3.ap-northeast-2.amazonaws.com"
 # 사진 타입은 jpg로 통일
 pic:
   -
-    - ['2020_04', 'non_frying']
+    -
+      - '2020_04'
+      - 'non_frying'
+    -
+      - 'non_frying'
+      - 3
+      - |
+        불확실한 현실에 흔들리지않고 '현재'에 충실하려해요.
+        'nobody knows the way its gonna be'
+    -
+      - 'dureungri'
+      - 4
+      - |
+        현재는 과거없이 이야기될 수 없다고 생각했다. 작년과 비교해서 삶의 만족도가 크게 높아진건 사실이지만 그럼에도 변하지 않은 것이 있었다
+    -
+      - 'dreams_come_film'
+      - 3
+      - |
+        현실속에 이상을 꿈꾸고
+        현실에게 시비 겁니다
+        현실속에 고집을 피우고
+        현실에게 한마디 합니다
+        .
+        '네가 날 아무리 막으려 해도
+        흐르는 시간과 나는
+        꿈 꾸고 사랑하기를 멈추지 않을가야.'
+        현재 나는 현실속에 또 이상을 꿈 꿉니다
+    -
+      - 'mooonpoc_collection'
+      - 1
+      - |
+        나는 적극적으로 산산이 부서진다.
+    -
+      - 'shjdga'
+      - 1
+      - |
+        이제 갈림길에 서 있는 우리, 금방이라도 나가떨어질 것 같아
+        어디에 있을지는 모르지만 그래도 나중에 다시 보자
+
   -
-    - ['2020_03', 'dureungri'] # [date, poster_author]
-    - ['dureungri', 4] # [picture_owner, numero_picture]
-    - ['non_frying', 1]
-    - ['shjdga', 1]
+    - # [date, poster_author]
+      - '2020_03'
+      - 'dureungri'
+    - # [picture_owner, numero_picture, comment]
+      - 'dureungri'
+      - 4
+      - '서 있을 때 가장 만족스러운 순간들을 담았습니다.'
+    -
+      - 'non_frying'
+      - 1
+      - |
+        어려웠다. 왜사는지 정의 하는것도 사진으로 표현하는것도 그래서
+        '난 모르겠다'
+        질문에 답은 시간이 흘러 좀더 성장한 내가
+        답해줄걸??
+    -
+      - 'shjdga'
+      - 1
+      - |
+        "그땐틀렸고지금은맞아요"
+
