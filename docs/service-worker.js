@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.fe0190228ea1cc7cd366e758819513c0.js"
+  "/precache-manifest.d3c6252ceda60e0cd419250c78a84d30.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "dokidoki-exhibition"});
