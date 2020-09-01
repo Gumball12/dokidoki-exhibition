@@ -10,7 +10,7 @@ pic:
     -
       - 'dureungri'
       - 2
-      - &#34;사랑&#34;
+      - &ldquo;사랑&rdquo;
     -
       - 'kim_d_ream'
       - 1
@@ -40,7 +40,7 @@ pic:
     -
       - 'shjdga'
       - 1
-      - &#34;연속&#34;
+      - &ldquo;연속&rdquo;
     -
       - 'non_frying'
       - 4
